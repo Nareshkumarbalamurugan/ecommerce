@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import CategoryCard from "@/components/CategoryCard";
 import Footer from "@/components/Footer";
+import BankInfo from "@/components/BankInfo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import garlicImage from "@/assets/garlic.jpg";
@@ -53,7 +54,7 @@ const Index = () => {
               Explore our premium selection of wholesale spices sourced directly from trusted farmers
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {categories.map((category) => (
               <CategoryCard key={category.name} {...category} />
             ))}
@@ -70,7 +71,7 @@ const Index = () => {
                 Quality You Can Trust
               </h2>
               <p className="text-muted-foreground mb-4">
-                With over 15 years of experience in the wholesale spice industry, SpiceHub has 
+                With over 15 years of experience in the wholesale spice industry, SLS Garlic & Co. has 
                 established itself as a trusted partner for businesses seeking premium quality spices.
               </p>
               <p className="text-muted-foreground mb-6">
@@ -114,7 +115,7 @@ const Index = () => {
               {
                 name: "Rajesh Kumar",
                 business: "Kumar Spices Ltd.",
-                text: "SpiceHub has been our reliable partner for 5 years. Their quality is unmatched and prices are competitive for bulk orders.",
+                text: "SLS Garlic & Co. has been our reliable partner for 5 years. Their quality is unmatched and prices are competitive for bulk orders.",
               },
               {
                 name: "Priya Sharma",
@@ -148,12 +149,19 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <a href="tel:+919876543210">Call Now</a>
+              <a href="tel:+919789535353">Call Now</a>
             </Button>
             <Button size="lg" variant="outline" asChild className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <Link to="/enquiry">Send Enquiry</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Sample Bank Details */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <BankInfo title="Sample Bank Details for Quick Transfer" />
         </div>
       </section>
 

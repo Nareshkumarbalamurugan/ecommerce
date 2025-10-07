@@ -24,7 +24,7 @@ const Enquiry = () => {
     
     // Create WhatsApp message
     const whatsappMessage = `New Enquiry:\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nProduct: ${formData.product}\nQuantity: ${formData.quantity}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/919789535353?text=${encodeURIComponent(whatsappMessage)}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, "_blank");
@@ -87,7 +87,7 @@ const Enquiry = () => {
                   required
                   value={formData.phone}
                   onChange={(e) => handleChange("phone", e.target.value)}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 97895 35353"
                 />
               </div>
 
@@ -152,18 +152,9 @@ const Enquiry = () => {
           <div className="mt-8 text-center text-muted-foreground">
             <p>Or contact us directly:</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
-              <a
-                href="tel:+919876543210"
-                className="text-primary font-medium hover:underline"
-              >
-                📞 +91 98765 43210
-              </a>
-              <a
-                href="mailto:info@spicehub.com"
-                className="text-primary font-medium hover:underline"
-              >
-                ✉️ info@spicehub.com
-              </a>
+              <a href="tel:+914443165353" className="text-primary font-medium hover:underline">📞 Shop: 044 43165353 (MSR)</a>
+              <a href="tel:+919789535353" className="text-primary font-medium hover:underline">📞 Cell: 97895 35353</a>
+              <a href="tel:+919360335353" className="text-primary font-medium hover:underline">📞 Cell: 93603 35353</a>
             </div>
           </div>
         </div>

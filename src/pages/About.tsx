@@ -10,7 +10,7 @@ const About = () => {
       {/* Header */}
       <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About SpiceHub</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About SLS Garlic & Co.</h1>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Your trusted partner in premium wholesale spices since 2008
           </p>
@@ -25,7 +25,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2008, SpiceHub began with a simple mission: to provide authentic, 
+                  Founded in 2008, SLS Garlic & Co. began with a simple mission: to provide authentic, 
                   premium quality spices to businesses at competitive wholesale prices. What started 
                   as a small family business has grown into one of the most trusted wholesale spice 
                   suppliers in India.
@@ -141,17 +141,17 @@ const About = () => {
             Ready to Partner with Us?
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Experience the SpiceHub difference. Contact us today for competitive wholesale prices.
+            Experience the SLS Garlic & Co. difference. Contact us today for competitive wholesale prices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919876543210"
+              href="tel:+919789535353"
               className="inline-flex items-center justify-center px-8 py-3 bg-card text-foreground rounded-lg font-medium hover:bg-card/90 transition-colors"
             >
               Call Now
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919789535353"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-primary-foreground text-primary-foreground rounded-lg font-medium hover:bg-primary-foreground hover:text-primary transition-colors"

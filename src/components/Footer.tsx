@@ -3,15 +3,14 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground mt-20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-secondary text-secondary-foreground mt-16 md:mt-20">
+      <div className="container mx-auto px-4 py-10 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">SpiceHub</h3>
-            <p className="text-sm opacity-90 mb-4">
-              Premium wholesale supplier of authentic spices. Quality you can trust, prices you'll love.
-            </p>
+            <h3 className="text-xl font-bold mb-2">SRI LAKSHMI SRINIVAASA GARLIC & CO.</h3>
+            <p className="text-xs opacity-90 mb-1">Garlic, General Merchants & Commission Agents</p>
+            <p className="text-sm opacity-90 mb-4">Old No. 10, Chinnathambi Mudali Street, Chennai - 600079</p>
             <div className="flex space-x-3">
               <a
                 href="https://facebook.com"
@@ -90,18 +89,24 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <span>123 Spice Market Road, Mumbai, Maharashtra 400001</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-accent transition-colors">
-                  +91 98765 43210
-                </a>
+                <span>Old No. 10, Chinnathambi Mudali Street, Chennai - 600079</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href="mailto:info@spicehub.com" className="hover:text-accent transition-colors">
-                  info@spicehub.com
+                <a href="tel:+914443165353" className="hover:text-accent transition-colors">
+                  Shop: 044 43165353 (MSR)
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 flex-shrink-0" />
+                <a href="tel:+919789535353" className="hover:text-accent transition-colors">
+                  Cell: 97895 35353
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 flex-shrink-0" />
+                <a href="tel:+919360335353" className="hover:text-accent transition-colors">
+                  Cell: 93603 35353
                 </a>
               </div>
             </div>
@@ -109,7 +114,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center text-sm opacity-80">
-          <p>&copy; {new Date().getFullYear()} SpiceHub. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SRI LAKSHMI SRINIVAASA GARLIC & CO. All rights reserved.</p>
         </div>
       </div>
     </footer>

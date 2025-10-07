@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
+import BankInfo from "@/components/BankInfo";
+import ContactPrompt from "@/components/ContactPrompt";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import garlicImage from "@/assets/garlic.jpg";
 import turmericImage from "@/assets/turmeric.jpg";
 import chilliImage from "@/assets/chilli.jpg";
@@ -53,6 +55,8 @@ const Products = () => {
     return acc;
   }, {});
 
+  const categories = Object.keys(productsByCategory || {});
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -68,6 +72,19 @@ const Products = () => {
       </section>
 
       <div className="container mx-auto px-4 py-16">
+        {categories.length > 0 && (
+          <div className="flex gap-3 mb-10 overflow-x-auto pb-2 -mx-4 px-4 snap-x">
+            {categories.map((cat) => (
+              <Link
+                key={cat}
+                to={`/category/${cat}`}
+                className="px-5 py-2.5 rounded-full bg-secondary text-secondary-foreground hover:bg-muted transition-colors whitespace-nowrap snap-start"
+              >
+                {cat.charAt(0).toUpperCase() + cat.slice(1)}
+              </Link>
+            ))}
+          </div>
+        )}
         {isLoading ? (
           <div className="text-center py-16">
             <p>Loading products...</p>
@@ -90,6 +107,7 @@ const Products = () => {
                     description={product.description}
                     quantities={product.quantities}
                     price={Number(product.price_per_kg)}
+                    category={product.category}
                   />
                 ))}
               </div>
@@ -111,6 +129,7 @@ const Products = () => {
                     description={product.description}
                     quantities={product.quantities}
                     price={Number(product.price_per_kg)}
+                    category={product.category}
                   />
                 ))}
               </div>
@@ -132,6 +151,7 @@ const Products = () => {
                     description={product.description}
                     quantities={product.quantities}
                     price={Number(product.price_per_kg)}
+                    category={product.category}
                   />
                 ))}
               </div>
@@ -153,6 +173,7 @@ const Products = () => {
                     description={product.description}
                     quantities={product.quantities}
                     price={Number(product.price_per_kg)}
+                    category={product.category}
                   />
                 ))}
               </div>
@@ -161,27 +182,15 @@ const Products = () => {
         )}
 
         {/* Bulk Order Note */}
-        <div className="bg-muted/50 p-8 rounded-xl text-center">
-          <h3 className="text-2xl font-bold mb-3">Bulk Orders & Custom Requirements</h3>
-          <p className="text-muted-foreground mb-6">
-            Looking for larger quantities or specific varieties? Contact us directly for competitive wholesale pricing.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+919876543210"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-            >
-              Call: +91 98765 43210
-            </a>
-            <a
-              href="https://wa.me/919876543210"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-colors"
-            >
-              WhatsApp Us
-            </a>
+        <div className="bg-muted/50 p-8 rounded-xl">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-3">Bulk Orders & Custom Requirements</h3>
+            <p className="text-muted-foreground mb-6">
+              Looking for larger quantities or specific varieties? Contact us directly for competitive wholesale pricing.
+            </p>
+            <ContactPrompt context="Products page" className="justify-center" />
           </div>
+          <BankInfo title="Sample Bank Details for Direct Transfer" />
         </div>
       </div>
 

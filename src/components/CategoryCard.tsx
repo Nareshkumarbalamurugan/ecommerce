@@ -5,19 +5,21 @@ interface CategoryCardProps {
   name: string;
   image: string;
   description: string;
-  link: string;
+  link: string; // kept for compatibility but not used now
 }
 
 const CategoryCard = ({ name, image, description, link }: CategoryCardProps) => {
+  const to = `/category/${name.toLowerCase()}`;
   return (
     <Link
-      to={link}
-      className="group relative overflow-hidden rounded-xl bg-card hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      to={to}
+      className="group relative overflow-hidden rounded-xl bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border/60 mx-auto w-full"
     >
       <div className="aspect-square overflow-hidden">
         <img
           src={image}
           alt={name}
+          loading="lazy"
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
         />
       </div>
