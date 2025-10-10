@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 import BankInfo from "@/components/BankInfo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import garlicImage from "@/assets/garlic.jpg";
-import turmericImage from "@/assets/turmeric.jpg";
-import chilliImage from "@/assets/chilli.jpg";
-import tamarindImage from "@/assets/tamarind.jpg";
+import garlicImage from "@/assets/myimages/garlic.jpeg";
+import turmericImage from "@/assets/myimages/turmeric1.jpg";
+import chilliImage from "@/assets/myimages/chilli.jpeg";
+import tamarindImage from "@/assets/myimages/tamarind1.jpeg";
 
 const categories = [
   {
