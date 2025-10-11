@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowLeft, CreditCard } from "lucide-react";
+import { Phone, ArrowLeft, CreditCard, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import garlicImage from "@/assets/garlic.jpg";
@@ -164,12 +164,24 @@ const ProductDetail = () => {
 
             {/* Additional Contact Info */}
             <div className="border-t pt-4">
-              <p className="text-sm text-muted-foreground mb-2">Contact Us:</p>
-              <div className="space-y-1 text-sm">
-                <p>📞 Shop: 044 43165353 (MSR)</p>
-                <p>📞 Cell: 97895 35353</p>
-                <p>📞 Cell: 93603 35353</p>
-                <p>⏰ Mon-Sat: 9 AM - 7 PM</p>
+              <p className="text-sm text-muted-foreground mb-3">Contact Us:</p>
+              <div className="space-y-2.5 text-sm">
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-primary" />
+                  <span>Shop: 044 43165353 (MSR)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-primary" />
+                  <span>Cell: 97895 35353</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-primary" />
+                  <span>Cell: 93603 35353</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-primary" />
+                  <span>Mon-Sat: 9 AM - 7 PM</span>
+                </div>
               </div>
             </div>
           </div>
