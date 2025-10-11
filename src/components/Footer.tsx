@@ -11,32 +11,6 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-2">SRI LAKSHMI SRINIVAASA GARLIC & CO.</h3>
             <p className="text-xs opacity-90 mb-1">Garlic, General Merchants & Commission Agents</p>
             <p className="text-sm opacity-90 mb-4">Old No. 10, Chinnathambi Mudali Street, Chennai - 600079</p>
-            <div className="flex space-x-3">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
